@@ -11,14 +11,14 @@
 
 #define black_pixel create_pixel_(ZERO, ZERO, ZERO, ONE)
 #define create_pixel(r, g, b) create_pixel_(r, g, b, ONE)
-#define focal_length 1.00
+#define focal_length 100.00
 #define screen_center create_vec(0, 0, -focal_length)
 #define camera create_vec(0, 0, 0)
 #define screen_upper_left                                                      \
   subtract(screen_center, create_vec(screen_width, screen_height, 0))
 #define pixel00_loc add(screen_upper_left, multiply(create_vec(1, 1, 0), 0.5))
 #define subtract(a, b) add(a, multiply(b, -1.00))
-#define divide(a, b) multiply(a, 1 / b);
+#define divide(a, b) multiply(a, 1 / b)
 
 typedef struct {
   uint8_t r;
