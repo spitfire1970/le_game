@@ -1,5 +1,6 @@
 clang-format -i main.cpp && \
 clang++ main.cpp -o game \
+-O3 \
 -I/opt/homebrew/include \
 -L/opt/homebrew/lib \
 -lraylib \
